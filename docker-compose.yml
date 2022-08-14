@@ -9,3 +9,15 @@ services:
       - ./app:/var/www/html/
     ports:
       - "80:80"
+  mssql:
+    restart: always
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1433:1433
+    volumes:
+      - ./db:/var/backups
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=P@ssw0rdnimda
+      - MSSQL_PID=Developer
+      - MSSQL_TCP_PORT=1433
