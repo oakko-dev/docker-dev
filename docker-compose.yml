@@ -15,7 +15,7 @@ services:
     ports:
       - 1433:1433
     volumes:
-      - ./db:/var/backups
+      - ../../Database:/var/backups
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=P@ssw0rdnimda

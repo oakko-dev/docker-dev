@@ -1,4 +1,4 @@
-# docker-php-apache
-Docker file with php-apache starter
+# docker-dev
+Docker file with dev starter
 
-docker-compose up
+docker-compose -p docker-dev up -d
